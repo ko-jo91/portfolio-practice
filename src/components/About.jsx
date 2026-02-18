@@ -16,7 +16,7 @@ const About = () => {
 
 
     return (
-        <motion.div variants={parent} initial="hidden" whileInView="visible" viewport={{ once: true, amount:0.3 }} className=' p-10 mb-20 space-y-7 flex flex-col justify-center items-center'>
+        <motion.div id="about" variants={parent} initial="hidden" whileInView="visible" viewport={{ once: true, amount:0.3 }} className=' p-10 mb-20 space-y-7 flex flex-col justify-center items-center'>
             <motion.h1 variants={children} className='text-3xl'>About Me</motion.h1>
             <motion.h1 variants={children} className='text-2xl text-center'>As a Software Engineer focused on front-end development with React, I’m driven by a commitment to
                 <br />
