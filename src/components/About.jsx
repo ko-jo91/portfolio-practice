@@ -20,7 +20,7 @@ const About = () => {
             <motion.h1 variants={children} className='text-3xl'>About Me</motion.h1>
             <motion.h1 variants={children} className='text-2xl text-center'>As a Software Engineer focused on front-end development with React, I’m driven by a commitment to
                 <br />
-                performance and accessibility. I craft engaging, efficient web applications designed
+                performance and accessibility. I develop engaging, efficient web applications designed
                 <br />
                 to elevate the user experience and improve the web for everyone.</motion.h1>
         </motion.div>
