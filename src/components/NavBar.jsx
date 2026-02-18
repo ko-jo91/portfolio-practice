@@ -28,20 +28,10 @@ const NavBar = () => {
         <div className='flex space-x-3 sm:space-x-5 md:space-x-7 lg:space-x-10'>
 
           <ul className='hidden text-lg sm:flex space-x-4 sm:space-x-5 md:space-x-10 tracking-tight items-center'>
-            <li>
-              <a className='cursor-pointer hover:scale-115 transition-all ease-in-out duration-300' href='#home'>Home</a>
-            </li>
-            <li>
-              <a className='cursor-pointer hover:scale-115 transition-all ease-in-out duration-300' href='#about'>About</a>
-            </li>
-            <li>
-              <a href='#home' className='cursor-pointer hover:scale-115 transition-all ease-in-out duration-300'>Portfolio</a>
-            </li>
-            <li>
-              <a href='#home' className='cursor-pointer hover:scale-115 transition-all ease-in-out duration-300'>Contact</a>
-            </li>
+            <li className='cursor-pointer hover:scale-115 transition-all ease-in-out duration-300'>Home</li>
+            <li className='cursor-pointer hover:scale-115 transition-all ease-in-out duration-300'>Portfolio</li>
+            <li className='cursor-pointer hover:scale-115 transition-all ease-in-out duration-300'>Contact</li>
           </ul>
-
           <div className=' flex space-x-2 items-center'>
             <button className='cursor-pointer' onClick={toggleMenu}>
               {mobileMenuIsOpen ? (<X className='sm:hidden flex w-5 h-5 cursor-pointer hover:scale-110 transition-all ease-in-out duration-300' />) : (<Menu className='sm:hidden flex w-5 h-5 cursor-pointer hover:scale-110 transition-all ease-in-out duration-300' />)}
@@ -54,18 +44,15 @@ const NavBar = () => {
       </div >
       <AnimatePresence>
         {mobileMenuIsOpen && (
-          <motion.ul variants={parent} initial="hidden" animate="visible" exit={{ opacity: 0, y: -70 }} className='sm:hidden fixed z-5 top-10 backdrop-blur-sm flex flex-col p-2 space-y-1 mx-5 mt-5 mb-7'>
+          <motion.ul variants={parent} initial="hidden" animate="visible" exit={{ opacity: 0, y: -70 }} className='sm:hidden fixed z-5 top-10 backdrop-blur-sm flex flex-col p-2 space-y-1 mx-5 mt-7 mb-7'>
             <motion.li variants={children}>
-              <a href='#home' className='text-sm tracking-tight' onClick={() => toggleMenu(false)}>Home</a>
+              <li className='text-sm tracking-tight' onClick={() => toggleMenu(false)}>Home</li>
             </motion.li>
             <motion.li variants={children}>
-              <a href='#about' className='text-sm tracking-tight' onClick={() => toggleMenu(false)}>About</a>
+              <li className='text-sm tracking-tight' onClick={() => toggleMenu(false)}>Portfolio</li>
             </motion.li>
             <motion.li variants={children}>
-              <a href='#home' className='text-sm tracking-tight' onClick={() => toggleMenu(false)}>Portfolio</a>
-            </motion.li>
-            <motion.li variants={children}>
-              <a href='#home' className='text-sm tracking-tight' onClick={() => toggleMenu(false)}>Contact</a>
+              <li className='text-sm tracking-tight' onClick={() => toggleMenu(false)}>Contact</li>
             </motion.li>
           </motion.ul>
         )}

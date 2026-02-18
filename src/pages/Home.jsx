@@ -58,8 +58,8 @@ const Home = () => {
     }
   ]
   return (
-    <div id="home">
-      <Hero />className='cursor-pointer hover:scale-1.5 transition-all ease-in-out duration-300'
+    <div>
+      <Hero />
       <About />
       <div className='bg-linear-to-br from-emerald-300 via-gray-100 shadow-2xl rounded-2xl to-sky-500 h-100 mx-8 sm:mx-15 mb-20 flex justify-center px-20 items-center'>
       <Skills />
@@ -73,9 +73,7 @@ const Home = () => {
           profession={data.profession}
           review={data.review} />
         ))}
-
       </div>
-
       <Footer />
     </div>
   )
