@@ -1,6 +1,8 @@
 import React from 'react'
 import NavBar from './components/NavBar'
 import Home from './pages/Home'
+import Portfolio from './pages/Portfolio'
+import Contact from './pages/Contact'
 import Hero from './components/Hero'
 import Skills from './components/Skills'
 import Footer from './components/Footer'
@@ -17,6 +19,8 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/portfolio' element={<Portfolio />} />
+        <Route path='/contact' element={<Contact />} />
         <Route path='/hero' element={<Hero />} />
         <Route path='/form' element={<Form />} />
         <Route path='/skills' element={<Skills />} />

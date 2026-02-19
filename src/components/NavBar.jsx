@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
 import { Menu, Moon, X } from 'lucide-react'
 import useMenu from '../hooks/useMenu'
@@ -28,9 +29,9 @@ const NavBar = () => {
         <div className='flex space-x-3 sm:space-x-5 md:space-x-7 lg:space-x-10'>
 
           <ul className='hidden text-lg sm:flex space-x-4 sm:space-x-5 md:space-x-10 tracking-tight items-center'>
-            <li className='cursor-pointer hover:scale-115 transition-all ease-in-out duration-300'>Home</li>
-            <li className='cursor-pointer hover:scale-115 transition-all ease-in-out duration-300'>Portfolio</li>
-            <li className='cursor-pointer hover:scale-115 transition-all ease-in-out duration-300'>Contact</li>
+            <NavLink to={'/'}><li className='cursor-pointer hover:scale-115 transition-all ease-in-out duration-300'>Home</li></NavLink>
+            <NavLink to={'/portfolio'}><li className='cursor-pointer hover:scale-115 transition-all ease-in-out duration-300'>Portfolio</li></NavLink>
+            <NavLink to={'/contact'}><li className='cursor-pointer hover:scale-115 transition-all ease-in-out duration-300'>Contact</li></NavLink>
           </ul>
           <div className=' flex space-x-2 items-center'>
             <button className='cursor-pointer' onClick={toggleMenu}>

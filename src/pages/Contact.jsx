@@ -1,10 +1,12 @@
 import React from 'react'
+import { motion } from 'motion/react'
+import Form from '../components/Form'
 
 const Contact = () => {
   return (
-    <div>
-      
-    </div>
+    <motion.div initial={{opacity:0,x:-70}} animate={{opacity:1,x:0}} transition={{duration:0.7}}>
+      <Form />
+    </motion.div>
   )
 }
 
